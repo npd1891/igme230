@@ -61,3 +61,7 @@ a[href^="http://www."]:after {
     padding-left: 3px;
     font-size: 90%;
   }
+
+a[href^="http://en.wikipedia"]:after {
+    content: none;
+  }
