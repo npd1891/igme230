@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+#wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+p, li {
+    font-size: 0.875em;
+    line-height: 1.6;
+}
+.subhead {
+    font-size: 80%;
+    margin-top: 0;
+    padding-top: 0;
+}
+h1, h2 {
+    font-family: serif;
+    border-bottom: 1px solid gray;
+    font-weight: normal;
+    overflow: hidden;
+}
+h1 {
+    margin-bottom: 0.2em;
+}
+#infobox {
+    text-align: center;
+    width: 250px;
+    border: 1px solid gray;
+    border-spacing: 3px;
+    background-color: white;
+    color: black;
+    margin: 0.5em 0 0.5em 1em;
+    padding: 0.2em;
+    max-width: 100%;
+}
