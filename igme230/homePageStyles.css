@@ -1,0 +1,40 @@
+*{
+    font-family: 'Source Sans Pro', sans-serif;
+	padding: 8px;
+}
+#wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+html{
+	background-color: #00394d;
+}
+img{
+	position:fixed;
+	max-width: 300px;
+	margin: 0.5em;
+}
+h1{
+	color: white;
+	padding: 16px;
+}
+#exercisebox, #projectbox{
+	width: 300px;
+	border: 8px solid #00131a;
+	border-spacing: 8px;
+    background-color: white;
+    color: black;
+    margin: 0.5em 0 0.5em 1em;
+    padding: 0.2em;
+}
+#exercisebox{
+	position: relative;
+	left: 350px;
+	top: 15px;
+}
+#projectbox{
+	list-style: inside;
+	position: relative;
+	left: 350px;
+	top: 32px;
+}
