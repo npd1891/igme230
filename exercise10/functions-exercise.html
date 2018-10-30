@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Week 9 Homework</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i');
+       html { font-family: Lato; font-size: 16px; }
+       main { max-width: 800px; margin: 0 auto; border: 1px dotted black; padding: 0 10px;} h1 { font-weight: 900;}
+   </style>
+
+</head>
+
+<body>
+    <main>
+        <h1>My Favorites</h1>
+        <h2>My Favorite Colors</h2>
+    
+        <ol id="colorsList">
+    		
+        </ol>
+    
+        <h2>My Favorite Games</h2>
+    
+        <ol id="gamesList">
+    
+        </ol>
+    
+      </main>
+    
+    <script>
+        "use strict";
+        let colors = ["blue", "red", "grey"]; // add some colors
+        let games = ["Zelda: Ocarina of Time", "Bloodborne", "Fallout: New Vegas"]; // add some games
+		
+		let colorsList = document.querySelector("#colorsList");
+		let gamesList = document.querySelector("#gamesList");
+		
+//		//populate the arrays
+//		for(let i = 0; i < colors.length; i++){
+//			let newColorList = document.createElement("li");
+//			newColorList.innerHTML = colors[i];
+//			colorsList.appendChild(newColorList);
+//		}
+//		for(let n = 0; n < games.length; n++){
+//			let newGameList = document.createElement("li");
+//			newGameList.innerHTML = games[n];
+//			gamesList.appendChild(newGameList);
+//		}
+		
+		function createList(listElement, array){
+			for(let i = 0; i < array.length; i++){
+			let newList = document.createElement("li");
+			newList.innerHTML = array[i];
+			listElement.appendChild(newList);
+			}
+		}
+		createList(colorsList, colors);
+		createList(gamesList, games);
+		
+    </script>
+    
+</body>
+
+</html>
