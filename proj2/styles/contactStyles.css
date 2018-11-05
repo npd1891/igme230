@@ -1,0 +1,91 @@
+/*consistent styling with all pages*/
+* {
+	font-family: 'Lora', serif;
+	padding: 0px;
+	margin: 0px;
+}
+header{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	background: #516365;
+	padding: 5px;
+	align-items: baseline;
+}
+#empty{
+	flex-grow: 1;
+}
+.logo{
+	display: contents;
+	width: 60%;
+	align-items: center;
+}
+a,h1,h2{
+	color: #e4e9e9;
+	text-decoration: none;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+a:hover{
+	text-decoration: underline;
+	color: #e36b61;
+}
+h1{
+	font-size: 24pt;
+}
+h2{
+	font-size: 18pt;
+	color: #e36b61;
+}
+body{
+	background-size: cover;
+}
+/*form and other content*/
+#mainbody{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin: 40px auto;
+}
+form{
+	margin: 0 auto;
+	width: 400px;
+	padding: 1em;
+}
+form div + div{
+	margin-top: 1em;
+}
+label{
+	color: #e4e9e9;
+	display: inline-block;
+	width: 300px;
+	text-align: left;
+}
+input, textarea{
+	font-size: 12px;
+	width: 300px;
+	box-sizing: border-box;
+	border: 1px solid #516365;
+}
+input:focus, textarea:focus{
+	border-color: #516365;
+}
+textarea{
+	vertical-align: top;
+	height: 5em;
+}
+button{
+	margin-left: .5em;
+	color: #e4e9e9;
+	padding: 6px 10px;
+	background-color: #e36b61;
+}
+#resume{
+	display: contents;
+	width: 40%;
+}
+p{
+	color: #e4e9e9;
+	padding: 12px;
+}
