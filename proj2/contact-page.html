@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Nat Deis - Portfolio Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/contactStyles.css">
+
+</head>
+	
+<body background = "images/bg2.png">
+	<header>
+		<div id="logo"><img src="images/logo.png"></div>
+		<a href="main.html"><h1>Nat Deis - Portfolio Website</h1></a>
+		<div id="empty"></div>
+			<h2><a href="art-page.html">Art</a></h2>
+			<h2><a href="design-page.html">Design</a></h2>
+			<h2>Contact</h2>
+	</header>
+	
+	<main>
+		<div id="mainbody">
+			<form action="/form-handler" method="post">
+				<div>
+					<label for="name">Name:</label>
+					<input type="text" id="name" name="user_name">
+				</div>
+				<div>
+					<label for="mail">Email:</label>
+					<input type="email" id="mail" name="user_mail">
+				</div>
+				<div>
+					<label for="msg">Message:</label>
+					<textarea id="msg" name="user_message"></textarea>
+				</div>
+				<div class="button">
+					<button type="submit">Send Message</button>
+					<button type="reset">Reset</button>
+				</div>
+				<p>Attention! This isn't actually linked to anything yet, so use it to scream into the void.</p>
+			</form>
+			<div id="resume">
+				<a href="images/resume.pdf" target="_blank"><img src="images/resume.png"></a>
+			</div>
+		</div>
+	</main>
+
+</body>	
+	
+</html>
