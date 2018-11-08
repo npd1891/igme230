@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>In-Class JQuery Demo 2</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        <style>
+            #navpanel {
+                background-color: azure;
+                width: 200px;
+                height: 200px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <button id="show">Show</button>
+        <button id="hide">Hide</button>
+        <div id="navpanel">
+            <ul>
+            <li>Link 1</li>
+            <li>Link 1</li>
+            <li>Link 1</li>
+            </ul>
+        </div>
+        <script>
+            //$ signals jquery, click is the handler, function handles the actual action
+            $("#hide").click(function(){
+                            //button is affecting div nav panel
+                            //hide in 1,000 milliseconds, keywords work too
+                            $("#navpanel").hide(1000);
+                            });
+            $("#show").click(function(){
+                            $("#navpanel").show("fast");
+                            });
+        </script>
+    </body>
+</html>
