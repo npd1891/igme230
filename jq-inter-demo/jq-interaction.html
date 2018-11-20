@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid Pages</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Exo+2:300,900i" rel="stylesheet">
+    
+    <style>
+		*{
+			font-family: 'Exo 2', sans-serif;
+			box-sizing: border-box;
+		}
+		body{
+			background-color: #42668a;
+		}
+		h1,p{
+			color: white;
+		}
+		h1{
+			font-weight: 900i;
+			margin-left: 80px;
+		}
+		a,p{
+			margin-left: 18px;
+			margin-top: 0;
+			font-weight: 300;
+			font-size: 16px;
+			max-width: 40vw;
+		}
+		a{
+			color: #99ffeb;
+			text-decoration: none;
+		}
+		a: hover{
+			text-decoration: underline;
+		}
+		img{
+			width: 70vw;
+			height: 100%;
+			max-height: 90vw;
+		}
+		.page{
+			display: flex;
+			margin-right: 12px;
+			margin-left: 80px;
+			justify-content: space-between;
+			max-height: 100vw;
+		}
+		#navpanel {
+            display: grid;
+            grid-template-columns: 300px 1.5rem;
+            min-height: 200px;
+            max-height: 90vh;
+            overflow: scroll;
+            border: 1px solid black;
+            margin-bottom: 2em;
+            background-color: white;
+            position: fixed;
+            left: -300px;
+            z-index: 2;
+            padding-left: 20px;
+			background-color: #00334d;
+        }
+		#navtoggle {
+            grid-column-start: 2;
+            font-size: 3em;
+            font-weight: bold;
+			color: white;
+        }
+
+        #navmenu {
+            grid-column-start: 1;
+            grid-row-start: 1;
+            align-items: top;
+			padding-top: 10px;
+        }
+
+        #close {
+            display: none;
+        }
+
+        #open {
+            font-size: 2.5rem;
+        }
+
+        .submenu {
+            display: none; 
+        }
+
+        #content {
+            padding: 0 .5em 0 3em;
+        }
+		#empty{
+			padding: 300px;
+		}
+		::-webkit-scrollbar{
+			width: 20px;
+		}
+		::-webkit-scrollbar-track {
+    		background: #42668a;
+		}
+		::-webkit-scrollbar-thumb {
+    		background: #99ffeb; 
+		}
+		::-webkit-scrollbar-thumb:hover {
+    		background: #00ffcc; 
+		}
+	</style>
+	
+</head>
+	
+<body>
+	<div id="navpanel">
+        <div id="navtoggle"><span id="open">+</span><span id="close">-</span></div>
+        <div id="navmenu">
+            <p>Nav Menu</p>
+            <ul>
+                <li><a href="#pg1">Emerald Maelstrom Cadre</a></li>
+                <li><a href="#pg2">The Genestealer Cult</a></li>
+            </ul>
+        </div>
+    </div>
+	
+	<div id="pg1">
+		<div id="header1"><h1>The Emerald Maelstrom Cadre</h1></div>
+		<div class="page">
+		<img src="img1.jpg">
+		<div class="paragraph">
+			<p>A mighty group of warriors who have been tasked with defending an important mining planet from the malice of the Tyrannids, the Emerald Maelstrom Cadre is a group of young Tau looking to prove the strength of their recently developed army. In the early days of their time on the planet, they used to have great trade relations with the humans in the caves within the planet, but something had seemed amiss with them after a while. A small band of Pathfinders was sent to investigate the caves and hopefully discover what the humans were planning. Unfortunately, they did find out what was happening, but far too late. A Genestealer Cult has infiltrated the mining community, turning generations of humans into their genetic abominations. Few in the first Pathfinder team made it out alive.</p>
+			<p>The leader of the Emerald Maelstrom Cadre is Aun'Ui Shase'Kran, a young, naïve Ethereal who has barely ever seen the horrors of war. He is aided by his Commander Shas'El Riloh, a seasoned Fire Warrior who has seen many conflicts and knows the battlefield all too well. The army is well outfitted with Stealthsuits, Crisis Battlesuits, a Piranha, and a band of Kroot, but their quick discovery of the Genestealer Cult has meant that more units cannot come to aid them before the conflict comes to a head.</p>
+			<p>Aun'Ui Shase'Kran is now not only fighting to prove himself and the worth of his new army, but to save this whole corner of the galaxy from the all-consuming Tyrannids.</p>
+			<a href="#pg2">Next</a>
+		</div>
+		</div>
+	</div>
+	<div id="empty"></div>
+	<div id="pg2">
+		<div id="header2"><h1>Genestealer Cult</h1></div>
+		<div class="page">
+		<img src="img2.jpg">
+		<div class="paragraph">
+			<p>This Genestealer Cult has been seeded within the mine for several generations. The Patriarch has been hard at work upturning the system within the mine with not only his genetic abominations and psychic powers, but by cleverly manipulating the humans into trusting him and believing that he is a good leader for them.</p>
+			<p>This cult is well outfitted with many tools and fighters within the mining system such as Rock Grinders, Mining Lasers, and other mining vehicles. The humans were once well connected with the rest of the Imperium, so they have many supplies stacked deep within the mines.</p>
+			<p>The Magus, a second in command to the Patriarch, is more of the face of the cult. He has some disagreements with the Patriarch often, and their struggle for power sometimes keeps them from furthering their influence.</p>
+			<a href="#pg1">Back</a>
+		</div>
+		</div>
+	</div>
+	
+	<script>
+	/* JQuery for smooth scrolling (easier than native JS code)
+           Found at https://stackoverflow.com/questions/7717527/smooth-scrolling-when-clicking-an-anchor-link */
+		//sourced from the grid-pages demo work
+                //only links that start with #
+        $("a[href^='#']").click(function (event) {
+            event.preventDefault();
+            //hash value - things starting with #
+            let target = $(this.hash);
+            //target.offset.top finds where the top of the target is on the page
+            $('html, body').animate({ scrollTop: target.offset().top }, 600);
+			if (target.is(":focus")) { // Checking if the target was focused
+                return false;
+            } else {
+                target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                target.focus(); // Setting focus
+            };
+        });
+		
+		$("#close").click(function () {
+            $("#navpanel").animate({ left: '-300' }, "slow");
+            $("#close").toggle();
+            $("#open").toggle();
+        });
+
+        $("#open").click(function () {
+            $("#navpanel").animate({ left: '0px' }, "slow");
+            $("#close").toggle();
+            $("#open").toggle();
+        });
+
+        $("#mainmenu li a").click(function() {
+            $(this).next(".submenu").toggle();
+        });		
+	</script>
+</body>
+	
+</html>
