@@ -20,7 +20,7 @@ p{
 	z-index: 0;
 	position: absolute;
 	width: 25vw;
-	top: 14%;
+	top: 10%;
 	left: 37.7%;
 }
 #spikes{
@@ -65,7 +65,7 @@ p{
 	z-index: 0;
 	position: absolute;
 	width: 50vw;
-	top: 200%;
+	top: 207.5%;
 	left: 15%;
 }
 #hand{
@@ -73,7 +73,7 @@ p{
 	z-index: 1;
 	position: absolute;
 	width: 25vw;
-	top: 233%;
+	top: 238%;
 	left: 53%;
 }
 #circle{
@@ -81,7 +81,7 @@ p{
 	z-index: 2;
 	position: absolute;
 	width: 30vw;
-	top: 268%;
+	top: 262%;
 	left: 38%;
 }
 #eye{
@@ -97,7 +97,7 @@ p{
 	min-width: 400px;
 	position: absolute;
 	width: 57vw;
-	top: 95%;
+	top: 121%;
 	left: 24.22%;
 }
 #p3-1{
@@ -118,8 +118,8 @@ p{
 	z-index: 5;
 	position: absolute;
 	top: 290%;
-	left: 33%;
-	padding-bottom: 40px;
+	left: 37%;
+	padding-bottom: 80px;
 }
 
 @media only screen and (max-width: 800px){
