@@ -35,10 +35,10 @@ anime({
 	}
 })
 //paroller parallax scrolling
-$("#light2, [data-paroller-factor]").paroller({
-                        factor: 0.8,	//scrolling speed and offset
-                        type: 'background',	// background or foreground
-                        direction: 'vertical' 	// vertical or horizontal
+$("#light2, [data-paroller-factor]").paroller({//activates paroller w/ paroller factor
+                        factor: 0.8,//scrolling speed and offset
+                        type: 'background',// background or foreground
+                        direction: 'vertical' // vertical or horizontal
                     });
 $("#firefall, [data-paroller-factor]").paroller({
                         factor: 0.1,
@@ -68,7 +68,7 @@ $("#p3-3").click(function(){
 							duration: 8000,
 							easing: 'easeOutQuad',
 							complete: function(){
-								anime({
+								anime({//apparently you can nest completes inside completes
 									targets: ['#eye', '#circle'],
 									opacity: 0.6,
 									duration: 1000,
